@@ -7,9 +7,7 @@ A version deployed on Heroku can be tried out [here](https://face-recognition-vd
 2. Run `npm install`
 3. Run `npm start`
 4. You must add your own API key in the `controllers/image.js` file to connect to Clarifai API. You can grab Clarifai API key [here](https://www.clarifai.com/)
-
 5. Add your own database credentials to `server.js` line 12. Besides the back end code, the app also requires a PostgreSQL database which can be created and linked to your app easily on Heroku, remember to change the connection to the right host.
-
 6. Our database contains two tables to store the user and login info, created by queries below:
 CREATE TABLE users(
 	id serial PRIMARY KEY, 
@@ -24,5 +22,4 @@ CREATE TABLE login(
 	hash varchar(100) NOT NULL,
 	email text UNIQUE NOT NULL
 );
-
 7. In line 34 of "server.js", for deployment, you need to make sure the port that the app listens to is the one it gets from the deployment platform instead of the local port 3000. In our case, we use process.env.PORT.
