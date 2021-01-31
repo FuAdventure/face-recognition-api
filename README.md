@@ -17,7 +17,6 @@ A version deployed on Heroku can be tried out [here](https://face-recognition-vd
 <br>	entries BIGINT DEFAULT 0,
 <br>	joined TIMESTAMP NOT NULL
 <br>);
-<br>
 <br>CREATE TABLE login(
 <br>	id serial PRIMARY KEY,
 <br>	hash varchar(100) NOT NULL,
